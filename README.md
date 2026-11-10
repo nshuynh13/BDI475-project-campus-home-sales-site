@@ -36,7 +36,17 @@ https://your-username.github.io/your-repo-name/
 
 ## Data notes
 
-_Replace this line. Say which rows you left out and why, and how each figure on the site is defined. "Five things that will bite you" in the description sheet lists the problems to cover._
+**Rule for prices.** Only sales of $10,000 or more are counted. The 40 sales under $10,000 are left out, because the data sheet flags them as implausible. No other rows are removed for the chart and table. A blank price would also be left out, but there are none.
+
+**Median sale price by city.** Each city's median is the middle sale price among its counted sales. The chart and table on the site both read `data/city_median_sale_price.json`, which is made from the CSV by `scripts/make_city_medians.py`.
+
+To rebuild the file from the repository root:
+
+```bash
+python3 scripts/make_city_medians.py
+```
+
+Other warnings in the data sheet still apply, for example that the street address is not unique and that `home_type` is unreliable.
 
 ## Tools we used
 
